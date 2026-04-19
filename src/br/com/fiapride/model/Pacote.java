@@ -1,0 +1,28 @@
+package br.com.fiapride.model;
+
+/**
+ * Representa um pacote a ser entregue pelo sistema FiapDelivery.
+ */
+public class Pacote {
+
+    private String codigo;
+    private double pesoKg;
+    private String status;
+
+    public Pacote(String codigo, double pesoKg, String status) {
+        this.codigo = codigo;
+        this.pesoKg = pesoKg;
+        this.status = status;
+    }
+
+    public String getCodigo() { return codigo; }
+    public double getPesoKg() { return pesoKg; }
+    public String getStatus() { return status; }
+
+    /**
+     * Atualiza o status do pacote (ex: "Pendente" para "Em trânsito").
+     */
+    public void atualizarStatus(String novoStatus) {
+        this.status = novoStatus;
+    }
+}
